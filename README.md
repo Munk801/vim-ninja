@@ -1,15 +1,13 @@
-ir-vim
+vim-ninja
 ============
 
-My personal Vim setup I've spent the last three years building up.
-I tend to work on Linux, Mac, and Windows regularly so I have attempted to
-write my vimrc in such a way as to support all three with a single vimrc.
+In order to get back into vim, I need to organize everything and keep everything easy.
 
 Installation
 ------------
 
 	cd ~
-	git clone https://github.com/irrigger/ir-vim.git .vim
+	git clone https://github.com/munk801/vim-ninja .vim
 	ln -s .vim/vimrc .vimrc
 	cd .vim
 	git submodule init
