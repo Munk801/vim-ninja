@@ -1,9 +1,9 @@
-ir-vim
+vim-ninja
 ============
-
-My personal Vim setup I've spent the last three years building up.
-I tend to work on Linux, Mac, and Windows regularly so I have attempted to
-write my vimrc in such a way as to support all three with a single vimrc.
+In my attempt to get better at vim, I am creating this repo to supply my progress and change.
+Note, this repo was stolen from https://github.com/irrigger/ir-vim.git as he is the one
+getting me to become a vim addict.  Therefore, it was my pleasure to steal his vim
+repo and attempt to create my own.
 
 Installation
 ------------

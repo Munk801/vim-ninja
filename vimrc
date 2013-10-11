@@ -14,6 +14,8 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+:Helptags
+
 " Do not try to be VI compatible
 set nocompatible
 " Syntax highlighing
@@ -22,6 +24,9 @@ syntax on
 filetype on
 " Enable loading indent file for filetype
 filetype plugin indent on
+
+" Set the leader key to ,
+let mapleader = ','
 
 let irdata = '_data'
 let irdirs = {'backupdir': 'backup', 'dir': 'swap', 'undodir': 'undo'}
@@ -42,7 +47,7 @@ if has("win32")
 
 elseif has("unix")
     " Some attempts at nice fonts
-    set guifont=Inconsolata\ 8,DejaVu\ Sans\ Mono\ 8,Courier\ 8
+    set guifont=Inconsolata\ 12,DejaVu\ Sans\ Mono\ 12,Courier\ 12
 
 elseif has("gui_macvim")
     set lines=75
