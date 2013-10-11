@@ -9,7 +9,7 @@ Installation
 ------------
 
 	cd ~
-	git clone https://github.com/irrigger/ir-vim.git .vim
+	git clone https://github.com/munk801/vim-ninja .vim
 	ln -s .vim/vimrc .vimrc
 	cd .vim
 	git submodule init
@@ -34,12 +34,13 @@ Many individuals have contributed to my vim setup:
 * Jeff Lanzarotta [bufexplorer] (http://www.vim.org/account/profile.php?user_id=97)
 * Eric Van Dewoestine [SuperTab] (http://www.vim.org/account/profile.php?user_id=6016)
 * Matt Wozniski [Tabular] (https://github.com/godlygeek)
+* Brandon Harris [ReelFX-Vim-Guru] (https://github.com/irrigger)
 
 Self-Promotion
 --------------
 
 Like my vim setup? Follow the repository on
-[GitHub](https://github.com/irrigger/ir-vim.git)
+[GitHub](https://github.com/munk801/vim-ninja.git)
 
 License
 -------
