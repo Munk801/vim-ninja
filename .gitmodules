@@ -15,7 +15,7 @@
 	url = git://github.com/irrigger/vim-commentary.git
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
-	url = git://github.com/irrigger/vim-eunuch.git
+	url = git://github.com/tpope/vim-eunuch.git
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = git://github.com/irrigger/vim-repeat.git
@@ -34,3 +34,6 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = git://github.com/tpope/vim-abolish.git
+[submodule "bundle/jedi-vim/jedi"]
+	path = bundle/jedi-vim/jedi
+	url = git://github.com/davidhalter/jedi.git
