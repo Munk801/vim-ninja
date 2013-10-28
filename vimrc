@@ -11,8 +11,8 @@
 
 " ==================================== Start Up Settings ===
 
-"runtime bundle/pathogen/autoload/pathogen.vim
-"call pathogen#infect()
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 :Helptags
 
@@ -52,7 +52,7 @@ elseif has("unix")
 elseif has("gui_macvim")
     set lines=75
     set columns=78
-
+    set guifont=Inconsolata\ 12,DejaVu\ Sans\ Mono\ 12,Courier\ 12
 endif
 
 " Let's create our _data directory in the vim root.
