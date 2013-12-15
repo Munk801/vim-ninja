@@ -206,6 +206,7 @@ if has("autocmd")
         autocmd!
         autocmd FileType * setlocal ts=4 sts=4 sw=4 noexpandtab cindent
         autocmd FileType python,vim,vimrc setlocal ts=4 sts=4 sw=4 expandtab
+        autocmd FileType html,ruby setlocal ts=2 sts=2 sw=2 expandtab
     augroup END
 
     augroup set_text_width
