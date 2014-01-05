@@ -1,5 +1,5 @@
-[submodule "bundle/gundo"]
-	path = bundle/gundo
+[submodule "bundle/gundo.vim"]
+	path = bundle/gundo.vim
 	url = git://github.com/sjl/gundo.vim.git
 [submodule "bundle/surround"]
 	path = bundle/surround
@@ -22,11 +22,11 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "bundle/run_python"]
-	path = bundle/run_python
+[submodule "bundle/run_python-vim"]
+	path = bundle/run_python-vim
 	url = git://github.com/irrigger/run_python-vim.git
-[submodule "bundle/ir_utils"]
-	path = bundle/ir_utils
+[submodule "bundle/ir_utils-vim"]
+	path = bundle/ir_utils-vim
 	url = git://github.com/irrigger/ir_utils-vim.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
@@ -34,12 +34,12 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = git://github.com/tpope/vim-abolish.git
-[submodule "bundle/jedi-vim/jedi"]
-	path = bundle/jedi-vim/jedi
+[submodule "bundle/jedi"]
+	path = bundle/jedi
 	url = git://github.com/davidhalter/jedi.git
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
 [submodule "bundle/vim-bundler"]
-	path = bundle/vimbundler
+	path = bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git

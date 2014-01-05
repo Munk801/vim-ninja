@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/slu/Documents/Rails/dota2fl/app/controllers'
-let g:netrw_dirhist_2='/Users/slu/Documents/Rails/dota2fl/app/views/players'
-let g:netrw_dirhist_3='/Users/slu/Documents/Rails/dota2fl/app/views'
-let g:netrw_dirhist_4='/Users/slu/Documents/Rails/dota2fl/app/views/users'
-let g:netrw_dirhist_5='/Users/slu/Documents/Rails/dota2fl/app/views'
-let g:netrw_dirhist_6='/Users/slu/Documents/Rails/dota2fl/app'
-let g:netrw_dirhist_7='/Users/slu/Documents/Rails/dota2fl/app/views'
-let g:netrw_dirhist_8='/Users/slu/Documents/Rails/dota2fl/app/views/devise'
-let g:netrw_dirhist_9='/Users/slu/Documents/Rails/dota2fl/app/views/devise/registrations'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='C:/Windows'
+let g:netrw_dirhist_2='C:'
