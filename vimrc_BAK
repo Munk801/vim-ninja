@@ -32,11 +32,6 @@ let irdata = '_data'
 let irdirs = {'backupdir': 'backup', 'dir': 'swap', 'undodir': 'undo'}
 let irsplit = '/'
 let irroot = '.vim'
-
-" Blur settings
-let $BLUR = '\\source\source\dev\stephenl\stephenl1\'
-let $BLURIT = 'C:\blur\it'
-
 if has("win32")
     if has("autocmd")
         " Starts gvim in full screen mode
@@ -49,10 +44,6 @@ if has("win32")
 
     " Remove special windows keys (copy/paste/etc)
     set keymodel=
-
-    if has("gui_running")
-        set guifont=Consolas:h11:cANSI
-    endif
 
 elseif has("unix")
     " Some attempts at nice fonts
@@ -207,7 +198,6 @@ if has("autocmd")
         " Set some filtype stuff up
         autocmd!
         autocmd BufRead,BufNewFile *.ma setf mel
-		autocmd BufRead,BufNewFile *.ms setf maxscript
         autocmd BufRead,BufNewFile SConstruct setf python
     augroup END
 
@@ -215,7 +205,7 @@ if has("autocmd")
         " Filetype specific tabbing
         autocmd!
         autocmd FileType * setlocal ts=4 sts=4 sw=4 noexpandtab cindent
-        " autocmd FileType python,vim,vimrc setlocal ts=4 sts=4 sw=4 expandtab
+        autocmd FileType python,vim,vimrc setlocal ts=4 sts=4 sw=4 expandtab
         autocmd FileType html,ruby setlocal ts=2 sts=2 sw=2 expandtab
     augroup END
 
@@ -268,9 +258,6 @@ noremap <leader>s :setlocal spell! spelllang=en_gb<CR>
 " There are no known words in the dictionary that start with kj so I will use this.
 " inoremap kj <es
 noremap <leader>sy :if exists("g:syntax_on") <Bar> syntax off <Bar> else <Bar> syntax on <Bar> endif <CR>c>
-
-" NERDTREE
-noremap <leader>n :NERDTreeToggle<CR>
 
 " ====================================== Plugin Settings ===
 "Additional python syntax highlighting
