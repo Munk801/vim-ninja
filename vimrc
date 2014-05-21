@@ -108,8 +108,9 @@ if has("gui_running")
     " Give me just the code area. No need for toolbars
     set guioptions=ac
     " My colorsceme
-    colorscheme molokai
-    let g:molokai_original=0
+	set background=light
+    colorscheme solarized
+    " let g:molokai_original=0
 else
     " Adapt colors for dark background
     set background=dark
