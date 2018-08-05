@@ -14,6 +14,7 @@ Installation
 	cd .vim
 	git submodule init
 	git submodule update
+	launch vim and run :PluginInstall
 
 You should now be up and running with my setup.
 
@@ -45,6 +46,6 @@ Like my vim setup? Follow the repository on
 License
 -------
 
-Copyright (c) Brandon Harris.  Distributed under the same terms as Vim itself.
+Copyright (c) Stephen Lu.  Distributed under the same terms as Vim itself.
 See `:help license`.
 
