@@ -25,6 +25,18 @@ filetype on
 " Enable loading indent file for filetype
 filetype plugin indent on
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+
+call vundle#end() "required
+filetype plugin indent on "required
+
 " Set the leader key to ,
 let mapleader = ','
 
@@ -63,6 +75,15 @@ elseif has("gui_macvim")
     set columns=78
     set guifont=Inconsolata\ 12,DejaVu\ Sans\ Mono\ 12,Courier\ 12
 endif
+
+" Relative Line Numbers
+
+set number relativenumber
+augroup numbertoggle
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup end
 
 " Let's create our _data directory in the vim root.
 let irdirname = expand('~' . irsplit . irroot . irsplit . irdata)
@@ -151,7 +172,7 @@ set wildmode=list:longest,full
 " Whoever wanted to modify a .pyc?
 set wildignore+=*.pyc
 " Commandline remembrance
-set history=100000
+" set history=100000
 " Give me lots of Undos
 set undolevels=100000
 " Let my cursor go everywhere
