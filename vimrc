@@ -33,6 +33,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
+Plugin 'mbbill/undotree'
 
 call vundle#end() "required
 filetype plugin indent on "required
@@ -44,10 +45,6 @@ let irdata = '_data'
 let irdirs = {'backupdir': 'backup', 'dir': 'swap', 'undodir': 'undo'}
 let irsplit = '/'
 let irroot = '.vim'
-
-" Blur settings
-let $BLUR = '\\source\source\dev\stephenl\stephenl1\'
-let $BLURIT = 'C:\blur\it'
 
 if has("win32")
     if has("autocmd")
@@ -129,13 +126,14 @@ if has("gui_running")
     " Give me just the code area. No need for toolbars
     set guioptions=ac
     " My colorsceme
+	syntax enable
 	set background=light
     colorscheme solarized
     " let g:molokai_original=0
 else
     " Adapt colors for dark background
     set background=dark
-    set t_Co=256
+    "set t_Co=256
 endif
 
 " ======================================= Basic Settings ===
@@ -294,10 +292,14 @@ noremap <leader>sy :if exists("g:syntax_on") <Bar> syntax off <Bar> else <Bar> s
 " NERDTREE
 noremap <leader>n :NERDTreeToggle<CR>
 
+" GVim Copy Paste
+set clipboard=unnamedplus
+
 " ====================================== Plugin Settings ===
 "Additional python syntax highlighting
 let python_highlight_all=1
 
 " Gundo Plugin
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 
+let g:NERDTreeDirArrows=0
