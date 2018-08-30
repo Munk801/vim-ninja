@@ -34,6 +34,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
+Plugin 'BrainDeath0/Hypsteria'
+Plugin 'vim-scripts/indentpython.vim'
 
 call vundle#end() "required
 filetype plugin indent on "required
@@ -128,7 +130,7 @@ if has("gui_running")
     " My colorsceme
 	syntax enable
 	set background=light
-    colorscheme solarized
+    colorscheme hypsteria
     " let g:molokai_original=0
 else
     " Adapt colors for dark background
@@ -292,6 +294,19 @@ noremap <leader>sy :if exists("g:syntax_on") <Bar> syntax off <Bar> else <Bar> s
 " NERDTREE
 noremap <leader>n :NERDTreeToggle<CR>
 
+" Copy and paste commands for filepath
+" Convert slashes to backslashes for Windows.
+if has('win32')
+  nmap <leader>cs :let @*=substitute(expand("%"), "/", "\\", "g")<CR>
+  nmap <leader>cl :let @*=substitute(expand("%:p"), "/", "\\", "g")<CR>
+
+  " This will copy the path in 8.3 short format, for DOS and Windows 9x
+  nmap <leader>c8 :let @*=substitute(expand("%:p:8"), "/", "\\", "g")<CR>
+else
+  nmap <leader>cs :let @+=expand("%")<CR>
+  nmap <leader>cl :let @+=expand("%:p")<CR>
+endif
+
 " GVim Copy Paste
 set clipboard=unnamedplus
 
@@ -303,3 +318,15 @@ let python_highlight_all=1
 nnoremap <F5> :UndotreeToggle<CR>
 
 let g:NERDTreeDirArrows=0
+
+" Python Syntax
+" Number of spaces that a pre-existing tab is equal to.
+au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
+
+"spaces for indents
+au BufRead,BufNewFile *.py set tabstop=4
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.py set softtabstop=4
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+
+
