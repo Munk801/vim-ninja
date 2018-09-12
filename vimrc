@@ -36,6 +36,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
 Plugin 'BrainDeath0/Hypsteria'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'ajh17/spacegray.vim'
 
 call vundle#end() "required
 filetype plugin indent on "required
@@ -67,7 +68,7 @@ if has("win32")
 
 elseif has("unix")
     " Some attempts at nice fonts
-    set guifont=Inconsolata\ 12,DejaVu\ Sans\ Mono\ 12,Courier\ 12
+    set guifont=Hack\ 11,Inconsolata\ 12,DejaVu\ Sans\ Mono\ 12,Courier\ 12
 
 elseif has("gui_macvim")
     set lines=75
@@ -130,7 +131,8 @@ if has("gui_running")
     " My colorsceme
 	syntax enable
 	set background=light
-    colorscheme hypsteria
+    " colorscheme hypsteria
+    colorscheme spacegray
     " let g:molokai_original=0
 else
     " Adapt colors for dark background
@@ -236,8 +238,8 @@ if has("autocmd")
     augroup set_tabbing
         " Filetype specific tabbing
         autocmd!
-        autocmd FileType * setlocal ts=4 sts=4 sw=4 noexpandtab cindent
-        " autocmd FileType python,vim,vimrc setlocal ts=4 sts=4 sw=4 expandtab
+        " autocmd FileType * setlocal ts=4 sts=4 sw=4 noexpandtab cindent
+        autocmd FileType python,vim,vimrc setlocal ts=4 sts=4 sw=4 expandtab
         autocmd FileType html,ruby setlocal ts=2 sts=2 sw=2 expandtab
     augroup END
 
@@ -324,7 +326,6 @@ let g:NERDTreeDirArrows=0
 au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 
 "spaces for indents
-au BufRead,BufNewFile *.py set tabstop=4
 au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.py set softtabstop=4
 au BufRead,BufNewFile *.py,*.pyw set expandtab
