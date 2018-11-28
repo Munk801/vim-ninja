@@ -37,6 +37,8 @@ Plugin 'mbbill/undotree'
 Plugin 'BrainDeath0/Hypsteria'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ajh17/spacegray.vim'
+Plugin 'dracula/vim'
+" Plugin 'lexfrench/vim-JakeSender'
 
 call vundle#end() "required
 filetype plugin indent on "required
@@ -68,7 +70,9 @@ if has("win32")
 
 elseif has("unix")
     " Some attempts at nice fonts
-    set guifont=Hack\ 11,Inconsolata\ 12,DejaVu\ Sans\ Mono\ 12,Courier\ 12
+    if has("gui_running")
+        set guifont=Hack\ 11,Inconsolata\ 12,DejaVu\ Sans\ Mono\ 12,Courier\ 12
+    endif
 
 elseif has("gui_macvim")
     set lines=75
@@ -308,6 +312,9 @@ else
   nmap <leader>cs :let @+=expand("%")<CR>
   nmap <leader>cl :let @+=expand("%:p")<CR>
 endif
+
+" Retab
+noremap <leader>T :retab<CR>
 
 " GVim Copy Paste
 set clipboard=unnamedplus
