@@ -38,9 +38,15 @@ Plugin 'BrainDeath0/Hypsteria'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ajh17/spacegray.vim'
 Plugin 'dracula/vim'
+" Plugin 'w0rp/ale'
 " Plugin 'lexfrench/vim-JakeSender'
 
 call vundle#end() "required
+
+call plug#begin(expand('~/.vim/plugged'))
+Plug 'arcticicestudio/nord-vim'
+call plug#end()
+
 filetype plugin indent on "required
 
 " Set the leader key to ,
@@ -50,6 +56,8 @@ let irdata = '_data'
 let irdirs = {'backupdir': 'backup', 'dir': 'swap', 'undodir': 'undo'}
 let irsplit = '/'
 let irroot = '.vim'
+
+let sessions_path = '~/vim_sessions'
 
 if has("win32")
     if has("autocmd")
@@ -136,7 +144,10 @@ if has("gui_running")
 	syntax enable
 	set background=light
     " colorscheme hypsteria
-    colorscheme spacegray
+    " colorscheme spacegray
+    " colorscheme dracula
+    " colorscheme xcodedark
+    colorscheme nord
     " let g:molokai_original=0
 else
     " Adapt colors for dark background
@@ -243,7 +254,7 @@ if has("autocmd")
         " Filetype specific tabbing
         autocmd!
         " autocmd FileType * setlocal ts=4 sts=4 sw=4 noexpandtab cindent
-        autocmd FileType python,vim,vimrc setlocal ts=4 sts=4 sw=4 expandtab
+        autocmd FileType cpp,python,vim,vimrc setlocal ts=4 sts=4 sw=4 expandtab
         autocmd FileType html,ruby setlocal ts=2 sts=2 sw=2 expandtab
     augroup END
 
@@ -337,4 +348,6 @@ au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.py set softtabstop=4
 au BufRead,BufNewFile *.py,*.pyw set expandtab
 
-
+" Save Vim Sessions
+exec 'nnoremap <Leader>ss :mks! ' . g:sessions_path . '/*.vim<C-D><BS><BS><BS><BS><BS>'
+exec 'nnoremap <Leader>sr :so ' . g:sessions_path . '/*.vim<C-D><BS><BS><BS><BS><BS>'
