@@ -14,6 +14,9 @@ Installation
 	cd .vim
 	git submodule init
 	git submodule update
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	launch vim and run :PluginInstall
 
 You should now be up and running with my setup.
